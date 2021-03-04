@@ -7,29 +7,34 @@ Authorization by JWT token.
 
 Serialization of data for all project models (Post, Comment, Group, Follow)
 
-# Processing GET, POST, PATCH, PUT and DELETE queries to the Yatube project database
+Processing GET, POST, PATCH, PUT and DELETE queries to the Yatube project database
 
 # Installation
 
-## 1)Clone the repository
-## 2)Create and activate virtual environment for the project
+## 1. Clone the repository
+## 2. Create and activate virtual environment for the project
 
 `python -m venv venv`
 
 `source venv/scripts/activate`
 
-## 3)Install dependencies
+## 3. Install dependencies
 
 `python pip install -r requirements.txt`
 
-## 4)Make migrations
+## 4. Make migrations
 
 `python manage.py makemigrations`
+
 `python manage.py migrate`
 
-## 5)Run the server
+## 5. Run the server
 
 `python manage.py runserver`
+
+## 6. Read the doc
+
+`http://localhost:8000/redoc/`
 
 ## Examples.
 
