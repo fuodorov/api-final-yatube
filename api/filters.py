@@ -1,10 +1,10 @@
-from django_filters import rest_framework as filters
+from django_filters.rest_framework import FilterSet, CharFilter
 
 from .models import Post
 
 
-class GroupFilter(filters.FilterSet):
-    group = filters.CharFilter(lookup_expr='exact')
+class GroupFilter(FilterSet):
+    group = CharFilter(lookup_expr='exact')
 
     class Meta:
         model = Post
