@@ -37,8 +37,7 @@ class FollowSerializer(ModelSerializer):
 
     def validate(self, attrs):
         user = attrs.get('user')
-        following_username = attrs.get('following')
-        following = get_object_or_404(User, username=following_username)
+        following = get_object_or_404(User, username=attrs.get('following'))
         if following == user:
             raise ValidationError("You can't subscribe to yourself")
         return super(FollowSerializer, self).validate(attrs)
